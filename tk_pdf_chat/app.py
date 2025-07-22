@@ -80,7 +80,8 @@ def upload_pdf():
         with open(file_path, "rb") as f:
             files = {"pdf": f}
             response = requests.post(
-                "http://127.0.0.1:8000/upload_file",
+                # "http://127.0.0.1:8000/upload_file",
+                "https://chat-api-oumu.onrender.com/upload_file",
                 data={"user_name": name, "user_id": user_id},
                 files=files
             )
@@ -136,7 +137,8 @@ def send_query():
         return
 
     try:
-        response = requests.post("http://127.0.0.1:8000/query", data={
+        # response = requests.post("http://127.0.0.1:8000/query", data={
+        response = requests.post("https://chat-api-oumu.onrender.com/query", data={
             "user_id": user_id,
             "question": question
         })

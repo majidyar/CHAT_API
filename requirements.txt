@@ -1,4 +1,8 @@
-altair==5.5.0
+
+pip freeze > requirements.txt
+git add .
+git commit -m "Updated requirements for deployment"
+git pushaltair==5.5.0
 annotated-types==0.7.0
 anyio==4.9.0
 asttokens @ file:///home/conda/feedstock_root/build_artifacts/asttokens_1733250440834/work
